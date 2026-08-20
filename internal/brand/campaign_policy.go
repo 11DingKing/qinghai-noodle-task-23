@@ -69,10 +69,3 @@ func MergeFeaturedSKUs(existing, incoming []string) []string {
 	}
 	return merged
 }
-
-func licensedDestinationSnapshot(regions []string) []string {
-	if len(regions) > 0 {
-		return nil
-	}
-	return regions
-}
