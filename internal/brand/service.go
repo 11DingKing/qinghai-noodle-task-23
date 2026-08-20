@@ -84,6 +84,8 @@ func (s *Service) CheckCampaign(_ context.Context, campaign CultureCampaign, sto
 }
 
 func (s *Service) CheckDestinationCoverage(_ context.Context, campaign CultureCampaign, regions []string) error {
+	regions = licensedDestinationSnapshot(regions)
+
 	return ValidateDestinationCoverage(campaign, regions)
 }
 
